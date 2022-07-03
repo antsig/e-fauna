@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    color: black;
 }
 
 section {
@@ -29,7 +30,7 @@ header {
 }
 
 header .brand {
-    color: #fff;
+    color: black;
     font-size: 1.2em;
     font-weight: 700;
     text-decoration: none;
@@ -41,7 +42,7 @@ header .navigasi {
 }
 
 header .navigasi a {
-    color: #fff;
+    color: black;
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -54,7 +55,7 @@ header .navigasi a:hover {
 
 body {
     min-height: 110vh;
-    background-color: lightblue;
+    background-color: white;
 }
 
 /* h4 secara umum */
@@ -80,14 +81,14 @@ h4 {
 }
 
 .home .content1 h2 {
-    color: white;
+    color: black;
     font-size: 1.5em;
     font-weight: 300;
     width: '100%';
 }
 
 .home .content1 h1 {
-    color: white;
+    color: black;
     font-size: 2.5em;
     font-weight: 600;
 }
@@ -104,7 +105,7 @@ h4 {
 }
 
 .animasi-text h3 {
-    color: #4e9eff;
+    color: lightgray;
     font-size: 3em;
     font-weight: 700;
     line-height: 70px;
@@ -138,7 +139,7 @@ h4 {
 }
 
 .btns {
-    background-color: #3a6cf4;
+    background-color: black;
     color: gold;
     text-decoration: none;
     margin: 10px;
@@ -149,7 +150,7 @@ h4 {
 
 .btns:hover {
     background: white;
-    color: #3a6cf4;
+    color: black;
 }
 
 /* konten kanan */
@@ -223,7 +224,7 @@ ul {
 
 .section-title {
     position: relative;
-    color: #fff;
+    color: black;
     font-size: 2em;
     font-weight: 600;
 }
@@ -311,20 +312,32 @@ ul {
     transform: scale(1.2);
 }
 
+.hewan_img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    border-radius: 10px;
+    transform: scale(0.8);
+}
+
+.hewan_img:hover {
+    transform: scale(1);
+}
+
 /* footer */
 footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
     background: transparent;
-    color: #fff;
+    color: black;
     text-align: center;
     font-size: 0.7em;
     padding: 1em;
 }
 
 footer a {
-    color: #3a6cf4;
+    color: black;
     font-weight: 200;
     text-decoration: none;
 }
