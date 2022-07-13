@@ -7,17 +7,32 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  color: black;
 }
-
+p {
+  text-align: justify;
+  color: black;
+}
+span {
+  text-align: justify;
+}
 section {
-  padding: 100px 200px;
+  padding: 75px 200px;
 }
 
-/* untuk header */
+table {
+  width: 100%;
+  align-items: center;
+}
+
+ul {
+  padding-left: 25px;
+}
+
 header {
   z-index: 999;
   position: fixed;
-  background-color: black;
+  background-color: lightseagreen;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,11 +44,12 @@ header {
 }
 
 header .brand {
-  color: goldenrod;
+  color: black;
   font-size: 1.2em;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 header .navigasi {
@@ -41,7 +57,7 @@ header .navigasi {
 }
 
 header .navigasi a {
-  color: goldenrod;
+  color: black;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 500;
@@ -55,11 +71,19 @@ header .navigasi a:hover {
 
 body {
   min-height: 110vh;
+  background-color: white;
 }
-
+td {
+  text-align: justify;
+  vertical-align: top;
+  padding-top: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /* h4 secara umum */
 h4 {
-  color: goldenrod;
+  color: black;
+  text-align: justify;
 }
 
 /* home */
@@ -80,9 +104,16 @@ h4 {
 }
 
 .home .content1 h2 {
-  color: white;
-  font-size: 2em;
-  font-weight: 500;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 300;
+  width: "100%";
+}
+
+.home .content1 h1 {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
 .home .content1 h2 span {
@@ -90,48 +121,8 @@ h4 {
   font-weight: 600;
 }
 
-.animasi-text {
-  position: relative;
-  height: 70px;
-  overflow: hidden;
-}
-
-.animasi-text h3 {
-  color: #4e9eff;
-  font-size: 3em;
-  font-weight: 700;
-  line-height: 70px;
-  letter-spacing: 1px;
-}
-
-.animasi-text h3:nth-child(1) {
-  animation: text-move 10s infinite;
-}
-
-@keyframes text-move {
-  0% {
-    margin-top: 0;
-  }
-
-  25% {
-    margin-top: -70px;
-  }
-
-  50% {
-    margin-top: -140px;
-  }
-
-  75% {
-    margin-top: -70px;
-  }
-
-  100% {
-    margin-top: 0;
-  }
-}
-
 .btns {
-  background-color: #3a6cf4;
+  background-color: black;
   color: gold;
   text-decoration: none;
   margin: 10px;
@@ -142,7 +133,7 @@ h4 {
 
 .btns:hover {
   background: white;
-  color: #3a6cf4;
+  color: black;
 }
 
 /* konten kanan */
@@ -173,7 +164,7 @@ h4 {
 
 .about .content .col-left {
   position: relative;
-  width: 30%;
+  width: 33%;
 }
 
 .about .content .col-right {
@@ -197,15 +188,6 @@ h4 {
   border-radius: 10px;
 }
 
-table {
-  width: 100%;
-  align-items: center;
-}
-
-ul {
-  padding-left: 25px;
-}
-
 .title {
   width: 100%;
   display: flex;
@@ -216,9 +198,9 @@ ul {
 
 .section-title {
   position: relative;
-  color: #3a6cf4;
+  color: black;
   font-size: 2em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* project */
@@ -262,45 +244,15 @@ ul {
   transform: scale(1.2);
 }
 
-/* kontak */
-.kontak {
-  min-height: 100vh;
-  text-align: center;
-}
-
-.kontak .content {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.kontak .content .card {
-  width: 100px;
-  margin: 15px;
-}
-
-.kontak .content .img-card {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
+.hewan_img {
+  width: 90px;
+  height: 90px;
+  object-fit: fill;
   border-radius: 10px;
+  transform: scale(0.8);
 }
 
-.kontak .content .img-card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: 0.5s ease;
-}
-
-.kontak .content .img-card img:hover {
+.hewan_img:hover {
   transform: scale(1.2);
 }
 
@@ -309,15 +261,24 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  background: black;
-  color: #fff;
+  background: lightblue;
+  color: black;
   text-align: center;
   font-size: 0.7em;
   padding: 1em;
 }
 
 footer a {
-  color: #3a6cf4;
+  color: black;
   font-weight: 200;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="icon" rel="icon" href="img/icon/favicon.ico" />
+    <link type="icon" rel="icon" href="img/favicon.ico" />
     <title>E-Fauna | Pengenalan Fauna</title>
     <!-- 
             Tugas 2 Pemrograman Web 1 (Kelompok)
@@ -14,26 +14,29 @@
             Dosen   : Riad Sahara, S.SI., MT
 			Anggota	:
 			1. Antonius Sigid Priharsanto (210401070020)
-			2. Ahmad Albaihaqi Lubis ()
+			2. Ahmad Albaihaqi Lubis (210401010166)
 			3. Nino Vahrul Munif ()
         -->
     <!-- ambil CSS lokal -->
     <link rel="stylesheet" href="style.css" />
+    <!-- ambil JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body style="background-color: lightblue">
     <!-- header dan menu -->
     <header>
-      <a class="brand">E - Fauna</a>
+      <a class="brand" onclick="onClickBrand()">e - Fauna</a>
       <div></div>
       <div class="navigasi" style="font-weight: bold">
         <strong>
-          <a href="#home">Home</a>
           <a href="#pengertian">Pengertian</a>
-          <a href="#klasifikasi">Klasifikasi</a>
-          <a href="#jenis">Persebaran</a>
-          <a href="#team">Team</a>
-          <a href="#kontak">Kontak</a>
+          <a href="#habitat">Habitat</a>
+          <a href="#pembiakan">Pembiakan</a>
+          <a href="#tubuh">Tubuh</a>
+          <a href="#makanan">Makanan</a>
+          <a href="#gerak">Gerak</a>
+          <a href="#team">Tim</a>
         </strong>
       </div>
     </header>
@@ -42,39 +45,66 @@
     <section
       id="home"
       class="home"
-      style="background-image: url(img/bgmain.png)"
+      data-aos="fade-right"
+      style="background-image: url('img/1Apv.gif')"
     >
       <div class="content1">
-        <h2>
-          Halo teman-teman, ini adalah website untuk belajar tentang fauna
+        <h1 style="color: goldenrod">e-Fauna</h1>
+        <h2 style="color: white">
+          e-Fauna adalah web edukasi tentang fauna, yaitu segala jenis hewan
+          yang hidup di dunia.
           <br />
         </h2>
-        <div style="padding-top: 50px">
-          <a class="btns" href="#pengertian">Mulai Belajar</a>
-          <a class="btns" href="#kontak">Kirim Pesan</a>
-        </div>
+        <br /><br /><br />
+        <audio controls>
+          <source src="img/bgsound.mp3" type="audio/mpeg" />
+        </audio>
       </div>
     </section>
     <!-- akhir  home -->
 
     <!-- pengertian -->
-    <section class="about" id="pengertian">
+    <section class="about" id="pengertian" data-aos="fade-top">
       <div class="title">
-        <h2 class="section-title">Pengertian Fauna</h2>
-        <hr style="width: 500px; height: 5px; border-radius: 10px" />
+        <h2 class="section-title">Pengertian</h2>
+        <p>
+          Ada sekitar satu juta spesies hewan dengan struktur dan bentuk tubuh
+          yang sangat beraneka ragam. Hewan hampir menempati seluruh ekosistem
+          ada di bumi, namun kebanyakan spesies hewan hidup di air. Hewan-hewan
+          tersebut selanjutnya diklasifikasikan berdasarkan kriteria tertentu.
+          Untuk lebih lengkapnya lagi kita akan membahas Materi Macam Macam
+          Jenis Hewan dan Penggolongan Hewan.
+        </p>
       </div>
       <div class="content">
         <div class="col-left">
-          <div class="img-card">
-            <img src="" alt="" />
-          </div>
+          <br />
+          <video controls width="300px">
+            <source src="img/videofauna.mp4" type="video/mp4" />
+          </video>
         </div>
         <div class="col-right">
           <!-- paragraf 1 -->
-          <p style="text-align: justify"></p>
-          <br />
+          <p>
+            <span style="margin-left: 50px">Hewan</span> merupakan organisme
+            eukariotik (memiliki membran inti sel), multiseluler (memiliki sel
+            banyak), tidak memiliki dinding sel, tidak berklorofil sehingga
+            hidup sebagai organisme jenis heterotrof, dan bisa menggerakkan
+            tubuh untuk mencari makan atau mempertahankan diri dari predator
+            atau pemangsa.
+          </p>
           <!-- paragraft 2 -->
-          <p style="text-align: justify"></p>
+          <p>
+            <span style="margin-left: 50px"
+              >Ada sekitar satu juta spesies hewan dengan struktur dan bentuk
+              tubuh yang sangat beraneka ragam. Hewan menempati hampir semua
+              ekosistem di bumi, namun kebanyakan spesies hewan hidup di air.
+              Hewan-hewan tersebut selanjutnya diklasifikasikan berdasarkan
+              kriteria tertentu. Berikut adalah penggolongan hewan berdasarkan
+              Habitatnya, Cara berkembangbiaknya, Penutup Tubuhnya, Makanannya,
+              dan Geraknya.
+            </span>
+          </p>
           <br />
         </div>
       </div>
@@ -82,127 +112,511 @@
     <!-- akhir pengertian -->
 
     <!-- klasifikasi -->
-    <section
-      class="about"
-      id="klasifikasi"
-      style="background-image: url(img/bgmain.png)"
-    >
+    <!-- Berdasarkan Habitat -->
+    <section class="about" id="habitat" data-aos="fade-top">
+      <table>
+        <tr>
+          <div class="title">
+            <h2 class="section-title">Jenis Hewan Berdasarkan Habitat</h2>
+          </div>
+          <th width="33%">Hidup Di Darat</th>
+          <th width="33%">Hidup Di Air</th>
+          <th width="34%">Hidup Di Darat dan Air</th>
+        </tr>
+        <br />
+        <tr>
+          <td>
+            Hewan yang hidup di daratan atau bertempat tinggal di darat biasa
+            disebut hewan darat. Contoh hewan darat antara lain : Kuda, sapi,
+            kambing, Harimau, singa, kucing, dan sejenisnya.
+          </td>
+          <td>
+            Hewan yang hidup di air atau bertempat tinggal di dalam air biasa
+            disebut hewan air. Contoh hewan air antara lain : ikan, udang,
+            cumi-cumi, paus, lumba-lumba, gurita, dan sejenisnya.
+          </td>
+          <td>
+            Selain hidup di darat dan di air, ada juga hewan yang hidup di darat
+            dan di air. Hewan ini disebut dengan amfibi. Contoh hewan amfibi
+            adalah salamander dan katak. Katak memulai hidupnya di air. Setelah
+            dewasa, katak mengalami perubahan. Kemudian Katak dewasa hidup di
+            darat dan di air.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="margin-top: 16px">
+              <img src="./img/hewan/Hewan Darat/Sapi.jpg" class="hewan_img" />
+              <img
+                src="./img/hewan/Hewan Darat/Harimau.jpg"
+                class="hewan_img"
+              />
+              <img src="./img/hewan/Hewan Darat/Kucing.jpg" class="hewan_img" />
+            </div>
+          </td>
+          <td>
+            <div style="margin-top: 16px">
+              <img src="./img/hewan/Hewan Air/Ikan.jpg" class="hewan_img" />
+              <img
+                src="./img/hewan/Hewan Air/Cumi Cumi.jpg"
+                class="hewan_img"
+              />
+              <img
+                src="./img/hewan/Hewan Air/Lumba Lumba.jpg"
+                class="hewan_img"
+              />
+            </div>
+          </td>
+          <td>
+            <div style="margin-top: 16px">
+              <img
+                src="./img/hewan/Hewan Amfibi/Salamander.jpg"
+                class="hewan_img"
+              />
+              <img
+                src="./img/hewan/Hewan Amfibi/Axoloti.jpg"
+                class="hewan_img"
+              />
+              <img src="./img/hewan/Hewan Amfibi/Katak.jpg" class="hewan_img" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Berdasarkan Cara Berkembang Biak -->
+    <section class="about" id="pembiakan" data-aos="fade-top">
       <div class="title">
-        <h2 class="section-title">Klasifikasi Fauna</h2>
-        <hr style="width: 500px; height: 5px; border-radius: 10px" />
+        <h2 class="section-title">Jenis Hewan Berdasarkan Berkembang Biak</h2>
       </div>
       <div class="content">
         <div class="col-left">
-          <div class="img-card">
-            <img src="" alt="" />
+          <br />
+          <div style="margin-top: 16px">
+            <img src="./img/hewan/Hewan Ovipar/Burung.jpeg" class="hewan_img" />
+            <img
+              src="./img/hewan/Hewan Ovipar/Kura Kura.jpg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Ovipar/Cicak.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Ovipar/Penyu.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Ovipar/Bebek.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Ovipar/Ikan.jpg" class="hewan_img" />
+          </div>
+          <br /><br /><br /><br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Ovovivipar/Kuda laut.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Ovovivipar/Platypus.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Ovovivipar/Ular.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <br /><br /><br /><br /><br /><br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Vivipar/Lumba Lumba.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Vivipar/Harimau.jpg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Vivipar/Sapi.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Vivipar/Gajah.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Vivipar/Kucing.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Vivipar/Kerbau.jpg" class="hewan_img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <!-- paragraft 1 -->
+          <ul>
+            <li style="margin-bottom: 16px">
+              <br />
+              <p style="font-weight: 600">Hewan ovipar (bertelur)</p>
+              <p>
+                Hewan Ovipar merupakan hewan yang berkembangbiak dengan cara
+                bertelur. Embrio yang sudah terbentuk kemudian akan tumbuh
+                menjadi individu yang baru (anak) diluar tubuh induk, yaitu
+                berkembang di dalam telur sebelum menetas menjadi individu yang
+                baru.
+                <br />
+                Hewan Ovipar, proses pembuahan ada dua macam yaitu Pembuahan
+                Internal dan Pembuahan Eksternal. Pembuahan Internal yaitu
+                merupakan proses pembuahan Ovum oleh sperma yang terjadi di
+                dalam tubuh induk betina contohnya Ayam (unggas, termasuk
+                burung) dan penyu (reptilia).
+                <br />
+                Sementara Pembuahan Eksternal yaitu ialah proses pembuahan yang
+                terjadi di luar tubuh induk betina contoh : Ikan dan katak.
+                Contoh hewan ovipar yaitu burung, kura-kura, cicak, penyu,
+                bebek, dan ikan.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">
+                Hewan Ovovivipar (bertelur dan beranak/ melahirkan).
+              </p>
+              <p>
+                Hewan yang termasuk sebagai hewan Ovovivipar yaitu hewan yang
+                proses pembuahannya terjadi dalam tubuh induk betina. Dimana
+                hasil dari pembuahan ini kemudian membentuk telur dan masih
+                dalam rahim induk betina. Dan setelah janin tersebut mulai atau
+                sudah terbentuk secara sempurna, maka telur siap untuk
+                dikeluarkan dari dalam tubuh induk betina. Telur tersebut
+                kemudian langsung menetas ketika keluar dari tubuh sang induk.
+                <br />
+                Contoh hewan Ovovivipar yaitu ikan Hiu, beberapa jenis kadal dan
+                beberapa jenis ular dan sejenisnya.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">
+                Hewan Vivipar (beranak/ melahirkan)
+              </p>
+              <p>
+                Hewan yang digolongkan sebagai hewan Vivipar merupakan hewan
+                yang berkembangbiak dengan cara beranak atau melahirkan. Embrio
+                yang sudah terbentuk akan tumbuh menjadi individu baru di dalam
+                rahim induk betina sampai siap untuk dilahirkan.
+                <br />
+                Hewan vivipar termasuk dalam golongan Mamalia atau hewan
+                menyusui seperti lumba-lumba, harimau, sapi, gajah, kucing,
+                kerbau dan kambing.
+              </p>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <!-- Berdasarkan Penutup Tubuh -->
+    <section class="about" id="tubuh" data-aos="fade-top">
+      <div class="title">
+        <h2 class="section-title">Jenis Hewan Berdasarkan Penutup Tubuh</h2>
+      </div>
+      <div class="content">
+        <div class="col-left">
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Berambut/Kelinci.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Berambut/Beruang.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Berambut/Anjing.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img src="./img/hewan/Hewan Berbulu/Angsa.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Berbulu/Burung.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Berbulu/Ayam.jpg" class="hewan_img" />
+          </div>
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Bercangkang/Bekicot.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Bercangkang/Siput.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img src="./img/hewan/Hewan Bersisik/Kadal.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Bersisik/Ular.jpg" class="hewan_img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <!-- paragraft 1 -->
+          <ul>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Berambut</p>
+              <p>
+                Rambut pada hewan berfungsi sebagai pelindung kulit mereka.
+                Hewan hewan yang memiliki rambut yang tebal, seperti kucing,
+                kelinci, beruang dan anjing. Adapun hewan berambut tipis,
+                seperti sapi, kerbau, dan tikus.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Berbulu</p>
+              <p>
+                Contoh hewan berbulu antara lain bebek, angsa, burung dan ayam.
+                Bulu bebek tidak akan basah meskipun bebek tersebut berenang di
+                air, karena memiliki lapisan minyak. Bulu bulu tersebut juga
+                membantu hewan dalam terbang.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Bercangkang</p>
+              <p>
+                Hewan yang dilindungi oleh cangkang. Contohnya seperti bekicot
+                dan siput. Cangkang adalah zat kapur yanng keras. Cangkang
+                melindungi bagian tubuh hewan yang lunak.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Bersisik</p>
+              <p>
+                Contoh hewan bersisik yaitu seperti kadal, ular, dan ikan Sisik
+                ular membantunya bergerak melata di tanah. Sisik ikan membantu
+                ikan dalam melakukan pergerakan di dalam air. Sisik juga menjadi
+                penutup tubuh hewan. Contohnya pada reptil dan ikan. Reptil
+                ialah hewan melata. Seperti ular, buaya dan kadal. Sisik ikan
+                dan reptil berbeda.
+                <br />
+                Sisik ikan selalu berlendir. Lendir ini juga memudahkan ikan
+                bergerak di air. Di dalam air ikan bebas bergerak. Bergerak
+                mencari makan dan berkembang biak. Sisik pada reptil kering
+                tidak berlendir. Sisik ini berguna sebagai pelindung tubuh.
+                Yaitu dari pengaruh suhu dan penguapan pada habitatnya.
+              </p>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <!-- Berdasarkan Makanan -->
+    <section class="about" id="makanan" data-aos="fade-top">
+      <div class="title">
+        <h2 class="section-title">Jenis Hewan Berdasarkan Makanan</h2>
+      </div>
+      <div class="content">
+        <div class="col-left">
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Herbivora/Domba.jpg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Herbivora/Rusa.jpg" class="hewan_img" />
+            <img
+              src="./img/hewan/Hewan Herbivora/Tupai.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Karnivora/Buaya.jpg"
+              alt=""
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Karnivora/Hyena.jpg"
+              alt=""
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Karnivora/Serigala.jpg"
+              alt=""
+              class="hewan_img"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Omnivora/Panda.jpeg"
+              alt=""
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Omnivora/Gorilla.jpg"
+              alt=""
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Omnivora/Monyet.jpg"
+              alt=""
+              class="hewan_img"
+            />
+          </div>
+        </div>
+        <div class="col-right">
+          <!-- paragraft 2 -->
+          <ul>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Pemakan Tumbuhan (herbivora)</p>
+              <p>
+                Hewan herbivora ada yang makan daun-daun dan ada juga yang makan
+                rerumputan, contohnya sapi dan kambing. Ada pula herbivora yang
+                makan biji-bijian, seperti burung merpati, perkutut, dan parkit.
+                Dan ada herbivora yang makan buah-buahan, seperti kelelawar dan
+                burung beo.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Pemakan Daging (karnivora)</p>
+              <p>
+                Contoh hewan pemakan daging (Herbivora) yaitu seperti singa,
+                buaya, harimau, burung elang dan hiu. Tapi tidak semua hewa
+                karnivora memamkan daging kareana adapula yang memakan serangga.
+                Contoh hewan yang memakan serangga adalah cicak dan katak.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Pemakan Segalanya (omnivora)</p>
+              <p>
+                Hewan pemakan segala baik itu tumbuhan maupun daging disebut
+                omnivora. Omnivora memakan tumbuhan dan daging hewan lain.
+                Contoh omnivora yaitu seperti ayam, bebek, dan beruang. Karena
+                ayam makan jagung, padi, dan juga cacing. Beruang makan ikan dan
+                juga dedaunan.
+              </p>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <!-- Berdasarkan Gerak -->
+    <section class="about" id="gerak" data-aos="fade-top">
+      <div class="title">
+        <h2 class="section-title">Jenis Hewan Berdasarkan Gerak</h2>
+      </div>
+      <div class="content">
+        <div class="col-left">
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Berjalan/Jerapah.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Berjalan/Keledai.jpeg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Berjalan/Unta.jpeg" class="hewan_img" />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Melompat/Katak.jpeg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Melompat/Kanguru.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Melompat/Kelinci.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Terbang/Kelelawar.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Terbang/Kupu Kupu.jpg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Terbang/Lebang.jpg" class="hewan_img" />
+          </div>
+          <br />
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Berenang/Penguin.jpg"
+              class="hewan_img"
+            />
+            <img
+              src="./img/hewan/Hewan Berenang/Singa Laut.jpg"
+              class="hewan_img"
+            />
+          </div>
+          <div style="margin-top: 16px">
+            <img src="./img/hewan/Hewan Melata/Lintah.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Melata/Cacing.jpg" class="hewan_img" />
+          </div>
+          <div style="margin-top: 16px">
+            <img
+              src="./img/hewan/Hewan Merayap/biawak.jpeg"
+              class="hewan_img"
+            />
+            <img src="./img/hewan/Hewan Merayap/Komodo.jpg" class="hewan_img" />
+            <img src="./img/hewan/Hewan Merayap/Tokek.jpg" class="hewan_img" />
           </div>
         </div>
         <div class="col-right">
           <!-- paragraf 1 -->
-          <p style="text-align: justify; color: white">
-            klasifikasi fauna dan penjelasannya
-          </p>
-          <br />
-          <!-- paragraft 2 -->
-          <p style="text-align: justify"></p>
+          <ul>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Berjalan</p>
+              <p>
+                Hewan yang melakukan aktivitas dengan cara berjalan memiliki
+                kaki yang kuat dengan telapak kaki yang dirancang khusus untuk
+                berjalan. Contoh hewan yang berjalan adalah Jerapah, Keledai,
+                Unta, gajah, dan sejenisnya.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Melompat</p>
+              <p>
+                Selain berjalan, ada juga hewan yang melakukan aktivitasnya
+                dengan cara melompat untuk berpindah ke tempat lain. Hewan
+                melompat memiliki kaki. Kaki belakangnya panjang dan kuat.
+                Contohnya seperti katak, kangguru, dan kelinci.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Terbang</p>
+              <p>
+                Hewan melakuakn aktivitas dengan cara terbang, terbang dengan
+                sayapnya. Berbagai jenis burung bergerak dengan terbang.
+                Contohnya seperti kelelawar, kupu-kupu dan lebah.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Berenang</p>
+              <p>
+                Hewan air yang melakukan aktivitasnya dengan berenang yakni
+                menggunakan alat geraknya masing-masing. Contohnya Anjing laut
+                dan pinguin berenang dengan sayap dan kakinya. Ikan berenang
+                dengan menggunakan sirip dan ekornya.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Melata</p>
+              <p>
+                Hewan melata adalah hewan yang bergarak dengan otot perut.
+                Contoh lintah, cacing, dan ular.
+              </p>
+            </li>
+            <li style="margin-bottom: 16px">
+              <p style="font-weight: 600">Hewan Merayap atau Merangkak</p>
+              <p>
+                Hewan yang memiliki kaki, namun bukan untuk berdiri melainkan
+                untuk mendorong tubuhnya. Saat bergerak perut hewan ini menempel
+                pada tanah. Contoh hewan merayap atau merangkak antara lain
+                komodo, buaya, tokek, cicak, dan sejenisnya.
+              </p>
+            </li>
+          </ul>
           <br />
         </div>
       </div>
     </section>
     <!-- akhir klasifikasi -->
 
-    <!-- persebaran - jenis -->
-    <section class="about" id="jenis">
-      <div class="title">
-        <h2 class="section-title">Persebaran dan Jenis Fauna</h2>
-        <hr style="width: 500px; height: 5px; border-radius: 10px" />
-      </div>
-      <div class="content">
-        <div class="col-left">
-          <div class="img-card">
-            <img src="" alt="" />
-          </div>
-        </div>
-        <div class="col-right">
-          <!-- paragraf 1 -->
-          <p style="text-align: justify"></p>
-          <br />
-          <!-- paragraft 2 -->
-          <p style="text-align: justify"></p>
-          <br />
-          <!-- tabel 1 -->
-          <table border="1">
-            <tr>
-              <td colspan="2" align="center">
-                <h4></h4>
-              </td>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td width="20%">
-                <!-- list 1:  -->
-                <ul>
-                  <li><strong></strong></li>
-                  <li><strong></strong></li>
-                  <li><strong></strong></li>
-                </ul>
-              </td>
-              <td>
-                <!-- list 1:  -->
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-          <br />
-          <!-- tabel 2  -->
-          <table border="1">
-            <tr>
-              <td colspan="2" align="center">
-                <h4></h4>
-              </td>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>
-                <!-- list 2:  -->
-                <
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </td>
-              <td>
-                <!-- list 2: pekerjaan -->
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-    <!-- akhir persebaran -->
-
     <!-- team -->
-    <section
-      id="team"
-      class="project"
-      style="background-image: url(img/bgmain.png)"
-    >
+    <section id="team" class="project" data-aos="fade-top">
       <div class="title">
         <h2 class="section-title">Tim Penyusun</h2>
         <hr
@@ -216,47 +630,59 @@
       </div>
       <div class="content">
         <div class="card">
-          <div class="img-card" style="color: white"><img src="img/" /></div>
-          <p style="color: white">
+          <div class="img-card" style="color: black">
+            <img src="img/foto/ahmad.jpeg" />
+          </div>
+          <p style="color: black">
             Ahmad Albaihaqi Lubis<br />
-            NIM.
+            NIM. 210401010166 <br />
+            <a href="mailto:ahmadalbaihaqi69@gmail.com">Email Saya</a>
           </p>
         </div>
         <div class="card">
-          <div class="img-card" style="color: white">
+          <div class="img-card" style="color: black">
             <img src="img/foto/2015.png" />
           </div>
-          <p style="color: white">
+          <p style="color: black">
             Antonius Sigid Priharsanto<br />
-            NIM. 210401070020
+            NIM. 210401070020 <br />
+            <a href="mailto:underfighterkkh@gmail.com">Email Saya</a>
           </p>
         </div>
         <div class="card">
-          <div class="img-card" style="color: white"><img src="img/" /></div>
-          <p style="color: white">
-            NIno Vahrul Munif<br />
-            NIM.
+          <div class="img-card" style="color: black">
+            <img src="img/" />
+          </div>
+          <p style="color: black">
+            Nino Vahrul Munif<br />
+            NIM. <br />
+            <a href="mailto:ahmadalbaihaqi69@gmail.com">Email Saya</a>
           </p>
         </div>
       </div>
     </section>
     <!-- akhir team -->
 
-    <!-- kontak -->
-    <section id="kontak" class="kontak">
-      <div class="title">
-        <h2 class="section-title">Hubungi Kami</h2>
-        <hr style="width: 500px; height: 5px; border-radius: 10px" />
-      </div>
-      <p style="padding: 50px">
-        Untuk kritik, saran dan atau konsultasi bisa menghubungi kami melalui :
-        <br />
-      </p>
-      <div class="content">diisi form kirim email</div>
-    </section>
-
     <!-- footer -->
     <footer class="footer">Copyright &copy; 2022 | E-Fauna</footer>
+
     <!-- akhir footer -->
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // ketika brand di klik, maka akan kembali ke halaman utama
+    function onClickBrand() {
+      // scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    function onSubmit(e) {
+      e.preventDefault();
+      console.log("e", e);
+    }
+  </script>
 </html>
